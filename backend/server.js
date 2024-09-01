@@ -6,6 +6,7 @@ const passport = require('passport')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
 const path = require('path')
+const cors = require('cors');
 
 //config connection
 dotenv.config({path:'./config/.env'})
@@ -16,22 +17,25 @@ require('./config/google')(passport)
 //database connection
 connectDb()
 
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true
+}));
+
+
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())//for json data
-
-//storing session
-const store = MongoStore.create({
-    mongoUrl: process.env.MONGO_URL,
-    collectionName:'sessions'
-})
 
 //session
 app.use(
     session({
-    secret:process.env.SECRET,
+    secret:'shiwans',
     resave:false,
     saveUninitialized:false,
-    store: store
+    store: MongoStore.create({
+        mongoUrl: process.env.MONGO_URL,
+        collectionName:'sessions'
+    })
 }))
 
 //passport middleware

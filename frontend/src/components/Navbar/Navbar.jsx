@@ -58,6 +58,8 @@ const Navbar = () => {
       </ul>
       <div className="navbar-account">
         <Link to="/login" className="login-button">Login</Link>
+        {/* Change this classname if require */}
+        <Link to="http://localhost:5050/logout" className="login-button">Logout</Link>
       </div>
     </nav>
   );

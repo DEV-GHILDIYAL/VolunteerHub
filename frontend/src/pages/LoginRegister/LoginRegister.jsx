@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./LoginRegister.css";
 import Navbar from "../../components/Navbar/Navbar";
-import axios from "axios";
 import Footer from "../../components/Footer/Footer";
 
 const LoginRegister = () => {
@@ -30,12 +29,9 @@ const LoginRegister = () => {
     console.log("Password:", password);
   };
 
-  const handleGoogleSignIn = (e) => {
+  const handleGoogleSignIn = async (e) => {
     e.preventDefault();
-    axios.get("/auth/google", (req, res) => {
-      console.log("it works");
-    });
-    console.log("Google Sign-In button clicked");
+    window.location.href = "http://localhost:5050/auth/google";
   };
 
   return (
@@ -92,7 +88,10 @@ const LoginRegister = () => {
             <button type="submit">
               {isRegistering ? "Register" : "Login"}
             </button>
-            <button className="google-signin-button" onClick={handleGoogleSignIn}>
+            <button
+              className="google-signin-button"
+              onClick={handleGoogleSignIn}
+            >
               <img
                 src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png"
                 alt="Sign in with Google"
@@ -115,7 +114,7 @@ const LoginRegister = () => {
           </p>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
