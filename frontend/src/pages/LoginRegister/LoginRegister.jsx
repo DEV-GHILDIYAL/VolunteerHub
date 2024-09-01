@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './LoginRegister.css';
 import Navbar from '../../components/Navbar/Navbar';
+import axios from 'axios'
 
 const LoginRegister = () => {
   const [isRegistering, setIsRegistering] = useState(false);
@@ -28,6 +29,12 @@ const LoginRegister = () => {
     console.log('Password:', password);
   };
 
+  const handleClick = (e) =>{
+    e.preventDefault();
+    axios.get('/auth/google',(req,res)=>{
+      console.log("it works")
+    })
+  }
   return (
     <>
     <Navbar/>
@@ -80,6 +87,8 @@ const LoginRegister = () => {
             </div>
           )}
           <button type="submit">{isRegistering ? 'Register' : 'Login'}</button>
+          <button onClick={handleClick}>hi</button>
+          {/* <i class="fab fa-google left"> Log in</i></button> */}
         </form>
         <p className="toggle-link">
           {isRegistering ? (
