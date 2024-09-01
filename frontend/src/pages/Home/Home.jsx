@@ -11,7 +11,7 @@ const Home = () => {
       <Navbar />
       <Header />
       <div className="home-content">
-        <h2 className="upcoming-events-title">Upcoming Events</h2>
+        <h2 className="upcoming-events-title">UPCOMING EVENTS</h2>
         <CardSection />
       </div>
       <Footer/>
