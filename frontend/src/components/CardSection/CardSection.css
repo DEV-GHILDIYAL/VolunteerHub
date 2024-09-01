@@ -1,25 +1,26 @@
 .card-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center align cards */
-    padding: 20px;
-    background-color: #f9f9f9;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align cards to the left */
+  padding: 20px;
+  margin-left: 50px;
+  background-color: #f9f9f9;
+}
+
+.card-section .card {
+  flex: 1 1 calc(33.333% - 20px); /* Adjusts card size for responsive design */
+  margin: 10px;
+  box-sizing: border-box; /* Ensure padding and border are included in width/height */
+}
+
+@media (max-width: 768px) {
   .card-section .card {
-    flex: 1 1 calc(33.333% - 20px); /* Adjusts card size for responsive design */
-    margin: 10px;
+      flex: 1 1 calc(50% - 20px); /* 2 cards per row on medium screens */
   }
-  
-  @media (max-width: 768px) {
-    .card-section .card {
-      flex: 1 1 calc(50% - 20px);
-    }
+}
+
+@media (max-width: 480px) {
+  .card-section .card {
+      flex: 1 1 calc(100% - 20px); /* 1 card per row on small screens */
   }
-  
-  @media (max-width: 480px) {
-    .card-section .card {
-      flex: 1 1 100%;
-    }
-  }
-  
+}

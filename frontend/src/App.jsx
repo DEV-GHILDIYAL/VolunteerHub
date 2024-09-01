@@ -1,9 +1,8 @@
 import React from "react";
 import Home from "./pages/Home/Home";
 import { Routes, Route } from "react-router-dom";
-import Login from "./pages/Login/Login";
-import Register from "./pages/Register/Register";
 import LoginRegister from "./pages/LoginRegister/LoginRegister";
+import NGORegister from "./pages/NGORegister/NGORegister";
 
 const App = () => {
   return (
@@ -11,8 +10,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginRegister />} />
-        {/* <Route path="/register" element={<Register />} /> */}
-        {/* Add more routes here as needed */}
+        <Route path="/ngos/apply" element={<NGORegister />} />
       </Routes>
     </div>
   );
