@@ -26,19 +26,16 @@ app.use(cors({
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())//for json data
 
-//storing session
-const store = MongoStore.create({
-    mongoUrl: process.env.MONGO_URL,
-    collectionName:'sessions'
-})
-
 //session
 app.use(
     session({
-    secret:process.env.SECRET,
+    secret:'shiwans',
     resave:false,
     saveUninitialized:false,
-    store: store
+    store: MongoStore.create({
+        mongoUrl: process.env.MONGO_URL,
+        collectionName:'sessions'
+    })
 }))
 
 //passport middleware
