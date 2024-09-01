@@ -1,4 +1,3 @@
-// Navbar.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
@@ -6,7 +5,7 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="navbar-brand">
+      <div className="navbar-logo">
         <Link to="/">NGO Platform</Link>
       </div>
       <ul className="navbar-links">
@@ -56,18 +55,10 @@ const Navbar = () => {
             <Link to="/resources">Resources</Link>
           </div>
         </li>
-
-        {/* Account Dropdown */}
-        <li className="dropdown">
-          <Link to="/" className="dropdown-toggle">Account</Link>
-          <div className="dropdown-content">
-            <Link to="/login">Login/Sign Up</Link>
-            <Link to="/profile">Profile</Link>
-            <Link to="/dashboard">Dashboard</Link>
-            <Link to="/logout">Logout</Link>
-          </div>
-        </li>
       </ul>
+      <div className="navbar-account">
+        <Link to="/login" className="login-button">Login</Link>
+      </div>
     </nav>
   );
 };

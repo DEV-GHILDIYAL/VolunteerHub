@@ -7,8 +7,13 @@ const Donate = () => {
   return (
     <>
     <Navbar/>
+<<<<<<< Updated upstream
     <div >
       <h1>Hello Written by harmeet </h1>
+=======
+    <div>
+      
+>>>>>>> Stashed changes
     </div>
     <Footer/>
     </>

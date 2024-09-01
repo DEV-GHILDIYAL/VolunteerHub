@@ -1,3 +1,5 @@
+/* Navbar.css */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -6,7 +8,11 @@
   padding: 1rem 2rem;
 }
 
-.navbar-brand a {
+.navbar-logo {
+  flex: 1;
+}
+
+.navbar-logo a {
   color: white;
   text-decoration: none;
   font-size: 1.5rem;
@@ -16,6 +22,7 @@
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  flex: 2;
 }
 
 .navbar-links li {
@@ -37,7 +44,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  right: 0;
+  left: 0;
   background-color: #444;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   min-width: 150px;
@@ -66,4 +73,22 @@
 
 .dropdown-toggle:hover {
   background-color: #444;
+}
+
+.navbar-account {
+  flex: 1;
+  text-align: right;
+}
+
+.login-button {
+  color: white;
+  background-color: #007bff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
 }
