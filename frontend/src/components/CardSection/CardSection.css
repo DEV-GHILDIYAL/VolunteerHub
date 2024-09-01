@@ -1,0 +1,25 @@
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align cards */
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .card-section .card {
+    flex: 1 1 calc(33.333% - 20px); /* Adjusts card size for responsive design */
+    margin: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .card-section .card {
+      flex: 1 1 calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-section .card {
+      flex: 1 1 100%;
+    }
+  }
+  
