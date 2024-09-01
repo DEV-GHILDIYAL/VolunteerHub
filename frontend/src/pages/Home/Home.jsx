@@ -1,15 +1,15 @@
-import React from 'react'
-// import Header from '../../components/Header/Header'
-import Navbar from '../../components/Navbar/Navbar'
-import { Router } from 'react-router-dom'
+import React from 'react';
+import Navbar from '../../components/Navbar/Navbar';
+import Header from '../../components/Header/Header';
 
 const Home = () => {
   return (
-    <Router>
-        <Navbar/>
-        {/* <Header/> */}
-    </Router>
-  )
+    <div>
+      <Navbar />
+      <Header /> {/* Add Header component here */}
+      {/* Add other content here */}
+    </div>
+  );
 }
 
-export default Home
+export default Home;
