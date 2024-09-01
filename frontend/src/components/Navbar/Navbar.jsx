@@ -59,7 +59,7 @@ const Navbar = () => {
 
         {/* Account Dropdown */}
         <li className="dropdown">
-          <Link to="/account" className="dropdown-toggle">Account</Link>
+          <Link to="/" className="dropdown-toggle">Account</Link>
           <div className="dropdown-content">
             <Link to="/login">Login/Sign Up</Link>
             <Link to="/profile">Profile</Link>
