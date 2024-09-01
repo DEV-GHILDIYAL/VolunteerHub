@@ -7,8 +7,8 @@ const Donate = () => {
   return (
     <>
     <Navbar/>
-    <div cla>
-      
+    <div >
+      <h1>Hello Written by harmeet </h1>
     </div>
     <Footer/>
     </>
