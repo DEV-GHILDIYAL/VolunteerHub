@@ -1,82 +1,89 @@
 .header {
-    height: 34vw;
-    margin: 20px auto;
-    background: url('/banner.jpg') no-repeat center center;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-  }
-  
+  height: 34vw;
+  margin: 0;
+  background: url('/banner.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 10%;
+  left: 6vw;
+  animation: fadeIn 3s ease-in-out;
+  color: white;
+}
+
+.header-contents h2 {
+  font-weight: 500;
+  color: white;
+  font-size: clamp(20px, 4vw, 32px);
+  margin: 0;
+}
+
+.header-contents p {
+  color: white;
+  font-size: clamp(12px, 1vw, 16px);
+  margin: 0;
+}
+
+.header-contents button {
+  border: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  background-color: white;
+  font-size: clamp(12px, 0.9vw, 14px);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.header-contents button:hover {
+  background-color: #f0f0f0;
+  color: #333;
+  transform: translateY(-1px);
+}
+
+.header-contents button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1050px) {
   .header-contents {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5vw;
-    max-width: 50%;
-    bottom: 10%;
-    left: 6vw;
-    animation: fadeIn 3s ease-in-out;
-    color: white;
+    max-width: 45%;
   }
-  
-  .header-contents h2 {
-    font-weight: 500;
-    color: white;
-    font-size: clamp(22px, 4.5vw, 36px);
+}
+
+@media (max-width: 750px) {
+  .header-contents {
+    max-width: 65%;
+    bottom: 5%;
+    left: 4vw;
   }
-  
+
   .header-contents p {
-    color: white;
-    font-size: clamp(14px, 1vw, 18px);
-    margin: 0;
+    display: none;
   }
-  
+
   .header-contents button {
-    border: none;
-    color: #747474;
-    font-weight: 500;
-    padding: 0.8rem 1.5rem;
-    background-color: white;
-    font-size: clamp(13px, 1vw, 16px);
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    padding: 0.8rem 1.6rem;
   }
-  
-  .header-contents button:hover {
-    background-color: #f0f0f0;
-    color: #333;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  @media (max-width: 1050px) {
-    .header-contents {
-      max-width: 45%;
-    }
+  to {
+    opacity: 1;
   }
-  
-  @media (max-width: 750px) {
-    .header-contents {
-      max-width: 65%;
-      bottom: 5%;
-      left: 4vw;
-    }
-    
-    .header-contents p {
-      display: none;
-    }
-    
-    .header-contents button {
-      padding: 1rem 2rem;
-    }
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
+}
