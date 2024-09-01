@@ -1,21 +1,22 @@
 import React from 'react';
 import Card from '../Card/Card';
+import img from '../../assets/images/images.png'
 import './CardSection.css';
 
 const CardSection = () => {
   const cards = [
     {
-      image: '../../assets/images/images.png',
+      image:img,
       title: 'Event 1',
       description: 'Brief description of Event 1.',
     },
     {
-        image: '../../assets/images.png',
+      image:img,
       title: 'Event 2',
       description: 'Brief description of Event 2.',
     },
     {
-      image: '../../assets/images.png',
+      image:img,
       title: 'Event 3',
       description: 'Brief description of Event 3.',
     },
