@@ -13,7 +13,7 @@ const Donate = () => {
   }
   const handleClick = (e)=>{
     e.preventDefault();
-    if(!amount){
+    if(!amount || amount==null){
       toast.error('gareeb hai kya?', {
         position: "top-right",
         autoClose: 1000,
@@ -38,9 +38,13 @@ const Donate = () => {
           theme: "light",
           transition: Slide,
           });
+    }else{
+      const num = Number(total)+ Number(amount);
+      setTotal(num)
+      setAmount('')
+      document.getElementById('donation').value="";
+
     }
-    const num = Number(total)+ Number(amount);
-    setTotal(num)
   }
 
   return (
