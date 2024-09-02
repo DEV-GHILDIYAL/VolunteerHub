@@ -7,10 +7,8 @@ router.get('/logi',(req,res)=>{
 })
 //logout
 
-
 //get for google login
 router.get('/auth/google',passport.authenticate('google',{scope:['profile']}))
-
 
 router.get('/auth/google/callback',passport.authenticate('google',{failureRedirect:'http://localhost:5173/auth/google'}),(req,res)=>{
     res.redirect('http://localhost:5173/')

@@ -1,5 +1,3 @@
-/* Navbar.css */
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -38,13 +36,13 @@
 }
 
 .navbar-links a:hover {
-  background-color: #444;
+  background-color: transparent; /* Keep background transparent on hover */
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  left: 0;
+  right: 0;
   background-color: #444;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   min-width: 150px;
@@ -69,15 +67,20 @@
 .dropdown-toggle {
   color: white;
   cursor: pointer;
+  background-color: transparent; /* Make background transparent */
 }
 
 .dropdown-toggle:hover {
-  background-color: #444;
+  background-color: transparent; /* Keep hover background transparent */
 }
 
 .navbar-account {
   flex: 1;
   text-align: right;
+  position: relative;
+  display: flex; /* Ensure elements are in the same row */
+  align-items: center; /* Align elements vertically */
+  justify-content: flex-end; /* Align elements to the right */
 }
 
 .login-button {
@@ -87,8 +90,15 @@
   border-radius: 5px;
   text-decoration: none;
   display: inline-block;
+  margin-left: 1rem;
 }
 
 .login-button:hover {
   background-color: #0056b3;
+}
+
+/* Position the dropdown content correctly for the account section */
+.navbar-account .dropdown-content {
+  right: 0;
+  left: auto;
 }
