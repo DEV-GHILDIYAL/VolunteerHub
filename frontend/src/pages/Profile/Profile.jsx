@@ -35,22 +35,26 @@ const Profile = () => {
           <div className="content-section">
             <h3>Account Information</h3>
             <div className="content-item">
-              <label>Name:</label>
+              <label>Full Name</label>
               <p>{user.name}</p>
             </div>
+            <hr/>
             <div className="content-item">
-              <label>Email:</label>
+              <label>Email</label>
               <p>{user.email}</p>
             </div>
+            <hr/>
             <div className="content-item">
-              <label>Phone:</label>
+              <label>Phone</label>
               <p>{user.phone}</p>
             </div>
+            <hr/>
             <div className="content-item">
-              <label>Address:</label>
+              <label>Address</label>
               <p>{user.address}</p>
             </div>
-            <button>Edit Information</button>
+            <hr/>
+            <button>Edit</button>
           </div>
         );
       case 'badges':
