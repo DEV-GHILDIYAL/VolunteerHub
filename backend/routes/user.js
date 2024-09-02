@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport')
 
-router.get('/logi',(req,res)=>{
+router.get('/login',(req,res)=>{
     res.send("Hello there this is from backend routes js")
 })
 //logout

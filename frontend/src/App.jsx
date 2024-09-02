@@ -6,6 +6,8 @@ import NGORegister from "./pages/NGORegister/NGORegister";
 import Donate from "./pages/Donation/Donate";
 import Profile from "./pages/profile/Profile";
 import UpComingEvent from "./pages/UpcomingEvents/UpComingEvents";
+import AdminPage from "./pages/Admin/AdminPage";
+import EventPage from "./pages/eventPage/EventPage";
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
         <Route path="/ngos/apply" element={<NGORegister />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/events/upcoming" element={<UpComingEvent/>}/>
+        <Route path="/admin" element={<AdminPage/>}/>
+        <Route path="/event" element={<EventPage/>}/>
       </Routes>
     </div>
   );

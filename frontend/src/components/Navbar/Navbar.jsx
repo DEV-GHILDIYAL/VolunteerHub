@@ -59,7 +59,11 @@ const Navbar = ({user}) => {
             <Link to="/resources">Resources</Link>
           </div>
         </li>
+
+        <li><Link to="/admin">Admin</Link></li>
       </ul>
+
+      
 
       {/* Checking if user is logged in if yes then display name else show login button */}
       {/* Waiting for backend */}
@@ -85,7 +89,6 @@ const Navbar = ({user}) => {
             <div className="dropdown-content">
               <Link to="/profile">Profile</Link>
               <a href="http://localhost:5050/logout" >Logout</a>
-                
             </div>
           </div>
           <Link to="/login" className="login-button">Login</Link>
