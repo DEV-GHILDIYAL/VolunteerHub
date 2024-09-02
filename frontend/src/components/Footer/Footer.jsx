@@ -1,18 +1,18 @@
 import React from 'react'
 import './Footer.css'
-import { assets } from '../../assets/assets'
+import {logo,facebook_icon,twitter_icon,linkedin_icon} from '../../assets/assets'
 
 export const Footer = () => {
   return (
     <div className='footer' id='footer'>
         <div className="footer-content">
             <div className="footer-content-left">
-                <img src={assets.logo}/>
+                <img src={logo}/>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, temporibus. Officiis facere ipsa, laudantium reiciendis, officia nesciunt rem, quis numquam ipsam sint eligendi possimus molestias sed harum aperiam odio id! Sapiente debitis adipisci ullam?</p>
                 <div className="footer-social-icons">
-                    <img src={assets.facebook_icon} />
-                    <img src={assets.twitter_icon} />
-                    <img src={assets.linkedin_icon} />
+                    <img src={facebook_icon} />
+                    <img src={twitter_icon} />
+                    <img src={linkedin_icon} />
                 </div>
             </div>
             <div className="footer-content-center">
