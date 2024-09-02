@@ -26,4 +26,3 @@ const Card = ({ image, title, description }) => {
 };
 
 export default Card;
-w
