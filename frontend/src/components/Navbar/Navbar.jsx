@@ -63,18 +63,31 @@ const Navbar = ({user}) => {
 
       {/* Checking if user is logged in if yes then display name else show login button */}
       {/* Waiting for backend */}
-      <div className="navbar-account">
+      {/* <div className="navbar-account">
         {user ? (
           <div className="dropdown">
             <span className="dropdown-toggle">Account ({user.displayName})</span>
             <div className="dropdown-content">
               <Link to="/profile">Profile</Link>
-              <a href="http://localhost:5050/logout" className="login-button">Logout</a>
+              <a href="http://localhost:5050/logout">Logout</a>
             </div>
           </div>
         ) : (
           <Link to="/login" className="login-button">Login</Link>
         )}
+      </div> */}
+
+
+      {/* FOR TESTING */}
+      <div className="navbar-account">
+          <div className="dropdown">
+            <span className="dropdown-toggle">Account</span>
+            <div className="dropdown-content">
+              <Link to="/profile">Profile</Link>
+              <Link href="http://localhost:5050/logout" >Logout</Link>
+            </div>
+          </div>
+          <Link to="/login" className="login-button">Login</Link>
       </div>
     </nav>
   );
