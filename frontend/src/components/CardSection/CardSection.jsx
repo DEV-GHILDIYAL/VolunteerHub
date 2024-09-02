@@ -22,14 +22,20 @@ const CardSection = () => {
     },
     {
       image: img,
-      title: 'Event 3',
-      description: 'Brief description of Event 3.',
+      title: 'Event 4',
+      description: 'Brief description of Event 4.',
     },
 
     {
       image: img,
-      title: 'Event 3',
-      description: 'Brief description of Event 3.',
+      title: 'Event 5',
+      description: 'Brief description of Event 5.',
+    }, 
+
+    {
+      image: img,
+      title: 'Event 6',
+      description: 'Brief description of Event 6.',
     },    // Add more card objects as needed
   ];
 
