@@ -84,7 +84,8 @@ const Navbar = ({user}) => {
             <span className="dropdown-toggle">Account</span>
             <div className="dropdown-content">
               <Link to="/profile">Profile</Link>
-              <Link href="http://localhost:5050/logout" >Logout</Link>
+              <a href="http://localhost:5050/logout" >Logout</a>
+                
             </div>
           </div>
           <Link to="/login" className="login-button">Login</Link>
