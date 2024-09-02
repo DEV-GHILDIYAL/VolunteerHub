@@ -6,16 +6,14 @@ import './Home.css'; // Add a CSS file for Home-specific styles
 import Footer from '../../components/Footer/Footer';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import UpcomingEvents from '../../components/UpcomingEvents/UpcomingEvents';
 
 const Home = () => {
   return (
     <div>
       <Navbar />
       <Header />
-      <div className="home-content">
-        <h2 className="upcoming-events-title">UPCOMING EVENTS</h2>
-        <CardSection />
-      </div>
+      <UpcomingEvents/>
       <Footer/>
     </div>
   );
