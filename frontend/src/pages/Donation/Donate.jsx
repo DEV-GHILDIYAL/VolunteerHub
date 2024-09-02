@@ -1,9 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import './Donate.css';
+import { toast,Slide } from 'react-toastify';
 
 const Donate = () => {
+  const [amount, setAmount] = useState(0)
+  const [total, setTotal] = useState(0)
+  const handleChange = (e)=>{
+    setAmount(e.target.value);
+    
+  }
+  const handleClick = (e)=>{
+    e.preventDefault();
+    if(!amount){
+      toast.error('gareeb hai kya?', {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
+        transition: Slide,
+        });
+    }
+    else if(Number(amount)>100001){
+      toast('Goli beta masti nahi', {
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: false,
+          progress: undefined,
+          theme: "light",
+          transition: Slide,
+          });
+    }
+    const num = Number(total)+ Number(amount);
+    setTotal(num)
+  }
+
   return (
     <>
       <Navbar />
@@ -22,14 +61,14 @@ const Donate = () => {
           <p>I wish to make a donation of:</p>
 
           <form action="#" method="post"> 
-            <input type="text" id="donation" name="donation" min="1" placeholder="Enter amount" required />
+            <input type="text" id="donation" name="donation" min="1" placeholder="Enter amount" required onChange={handleChange} />
             
-            <button type="submit">Donate Now</button>
+            <button type="submit" onClick={handleClick}>Donate Now</button>
           </form>
         </div>
 
         <div className="top-content">
-          <h2>Raised So Far <input type="text" value="₹ 0" readOnly /></h2>
+          <h2>Raised So Far <input type="number" value={total} readOnly /></h2>
         </div>
       </div>
       <Footer />
