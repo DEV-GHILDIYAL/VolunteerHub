@@ -1,10 +1,6 @@
 import React from 'react'
 import './Footer.css'
-<<<<<<< HEAD
-import {logo,facebook_icon,twitter_icon,linkedin_icon} from '../../assets/assets'
-=======
 import { logo, facebook_icon, twitter_icon, linkedin_icon } from '../../assets/images/assets'
->>>>>>> bf1e88a7a96951b84e76f52506b3d06ceb67b8a6
 
 export const Footer = () => {
   return (
