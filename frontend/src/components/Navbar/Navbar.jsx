@@ -2,12 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = () => {
+// backend
+const Navbar = ({user}) => {
   return (
     <nav className="navbar">
+      {/* Logo Section */}
       <div className="navbar-logo">
         <Link to="/">NGO Platform</Link>
       </div>
+
+      {/* Navigation Links Section */}
       <ul className="navbar-links">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
@@ -56,10 +60,21 @@ const Navbar = () => {
           </div>
         </li>
       </ul>
+
+      {/* Checking if user is logged in if yes then display name else show login button */}
+      {/* Waiting for backend */}
       <div className="navbar-account">
-        <Link to="/login" className="login-button">Login</Link>
-        {/* Change this classname if require */}
-        <Link to="http://localhost:5050/logout" className="login-button">Logout</Link>
+        {user ? (
+          <div className="dropdown">
+            <span className="dropdown-toggle">Account ({user.displayName})</span>
+            <div className="dropdown-content">
+              <Link to="/profile">Profile</Link>
+              <a href="http://localhost:5050/logout" className="login-button">Logout</a>
+            </div>
+          </div>
+        ) : (
+          <Link to="/login" className="login-button">Login</Link>
+        )}
       </div>
     </nav>
   );
