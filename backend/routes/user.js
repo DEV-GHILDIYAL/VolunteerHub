@@ -27,20 +27,13 @@ router.get('/logout',(req,res,next)=>{
     })
 })
 
-router.get('/profile', (req, res) => {
-    if (req.isAuthenticated()) {
-        // Return user profile data if authenticated
-        // res.json({
-        //     name: req.user.name,
-        //     email: req.user.email
-        //     // Additional user info
-        // });
-    } else {
-        // Return dummy values if not authenticated
-        // res.json({
-        //     name: 'Guest',
-        //     email: 'guest@example.com'
-        // });
+router.get('/login/success',async (req, res) => { 
+    if(req.user){
+        res.status(200).json({message:"user login",user:req.user})
+
+    }else{
+        res.status(400).json({message:"Not authorized"})
     }
+
 });
 module.exports = router
