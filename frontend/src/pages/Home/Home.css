@@ -1,12 +1,11 @@
 .home-content {
-    padding: 20px;
-  }
-  
-  .upcoming-events-title {
-    font-size: 2rem;
-    font-weight: 600;
-    margin: 40px 0 20px;
-    text-align: center;
-    color: #333;
-  }
-  
+  padding: 20px;
+}
+
+.upcoming-events-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 40px 0 20px;
+  text-align: center;
+  color: #333;
+}

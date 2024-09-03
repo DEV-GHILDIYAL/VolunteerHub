@@ -1,12 +1,3 @@
-/* Ensure the body takes full height and no overflow */
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto; /* Allow vertical scrolling if necessary */
-}
-
 /* Adjust container to ensure it does not overflow */
 .login-register-container {
   display: flex;
@@ -59,7 +50,7 @@ body, html {
   box-sizing: border-box; /* Ensure padding is included in width */
 }
 
-button {
+.login-button {
   width: 100%;
   padding: 0.8rem;
   border: none;
@@ -92,13 +83,14 @@ button:disabled {
   background: none;
   border: none;
   color: #007bff;
-  cursor: pointer;
+  cursor: pointer; 
   font-size: 1rem;
   text-decoration: underline;
 }
 
 .toggle-link button:hover {
   color: #0056b3;
+  background-color: transparent;
 }
 
 .buttons {

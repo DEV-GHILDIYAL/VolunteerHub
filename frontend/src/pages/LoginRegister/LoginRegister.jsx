@@ -85,7 +85,7 @@ const LoginRegister = () => {
                 />
               </div>
             )}
-            <button type="submit">
+            <button type="submit" className="login-button">
               {isRegistering ? "Register" : "Login"}
             </button>
             <button

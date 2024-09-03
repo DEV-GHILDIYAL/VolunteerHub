@@ -9,7 +9,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+.ngo-register-container h2 {
   margin-bottom: 20px;
   text-align: center;
 }
@@ -37,7 +37,7 @@ h2 {
   resize: vertical;
 }
 
-button {
+.ngo-register-container button {
   width: 100%;
   padding: 10px;
   border: none;

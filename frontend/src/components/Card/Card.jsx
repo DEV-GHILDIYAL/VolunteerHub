@@ -1,9 +1,9 @@
 import React from 'react';
-import img from '../../assets/images/images.png'
+import img from '../../assets/images/images.png';
 import './Card.css';
 import { useNavigate } from 'react-router-dom';
 
-const Card = ({ image, title, description }) => {
+const Card = ({ image, title, description, location, time, ngoName }) => {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
@@ -16,6 +16,9 @@ const Card = ({ image, title, description }) => {
       <div className="card-content">
         <h3 className="card-title">{title}</h3>
         <p className="card-description">{description}</p>
+        <p className="card-location"><strong>Location:</strong> {location}</p>
+        <p className="card-time"><strong>Time:</strong> {time}</p>
+        <p className="card-ngo"><strong>Organized by:</strong> {ngoName}</p>
         
         <button className="card-button" onClick={handleButtonClick}>
           Participate

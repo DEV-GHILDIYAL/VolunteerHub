@@ -132,6 +132,7 @@ ul {
 }
 
 .logout-button {
+  width: 250px;
   margin-top: 70px;
   padding: 10px 20px;
   background-color: #dc3545;

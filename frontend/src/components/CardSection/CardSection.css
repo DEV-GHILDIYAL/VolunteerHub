@@ -3,10 +3,10 @@
   flex-wrap: wrap;
   justify-content: flex-start; /* Align cards to the left */
   padding: 20px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
   background-color: #f9f9f9;
-  gap :125px;
+  gap :6px;
 }
 
 .card-section .card {

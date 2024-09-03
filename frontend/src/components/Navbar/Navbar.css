@@ -83,8 +83,15 @@
   align-items: center;
   justify-content: flex-end;
 }
+.profile-navbar{
+  text-decoration: none;
+  color: white;
+}
+.profile-navbar:hover{
+  color: wheat;
+}
 
-.login-button {
+.login-navbar-button {
   color: white;
   background-color: #007bff;
   padding: 0.5rem 1rem;

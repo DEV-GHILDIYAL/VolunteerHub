@@ -85,14 +85,8 @@ const Navbar = ({user}) => {
 
       {/* FOR TESTING */}
       <div className="navbar-account">
-          <div className="dropdown">
-            <span className="dropdown-toggle">Account</span>
-            <div className="dropdown-content">
-              <Link to="/profile">Profile</Link>
-              <button onClick={logoutHandle()}><Link>Logout</Link></button>
-            </div>
-          </div>
-          <Link to="/login" className="login-button">Login</Link>
+          <Link to="/profile" className='profile-navbar'>Profile</Link>
+          <Link to="/login" className="login-navbar-button">Login</Link>
       </div>
     </nav>
   );

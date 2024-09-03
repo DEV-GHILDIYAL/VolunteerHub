@@ -14,7 +14,7 @@ const logoutHandle=()=>{
             if(response.ok){
                 toast.success('Logout succesfull', {
                       position: "top-right",
-                      autoClose: 10000,
+                      autoClose: 1000,
                       hideProgressBar: false,
                       closeOnClick: false,
                       pauseOnHover: true,
