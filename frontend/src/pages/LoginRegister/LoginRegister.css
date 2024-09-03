@@ -128,3 +128,7 @@ button:disabled {
 .google-signin-button:hover {
   background-color: #f8f9fa;
 }
+
+.input-group input[type = "text"]{
+  width : 100%;
+}

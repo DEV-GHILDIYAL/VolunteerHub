@@ -7,10 +7,10 @@
 }
 
 .ngo-register-container {
-  padding: 30px;
+  padding: 80px;
   max-width: 750px;
   margin: 0 auto;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -67,6 +67,7 @@ button:hover {
 .ngo-register-container input[type = "text"] , input[type = "email"],input[type = "tel"],input[type = "url"],input[type = "file"]{
   width :100%;
   border: 1px solid #ddd;
+  
 }
 .form-group select{
   width :100%;
@@ -75,5 +76,4 @@ button:hover {
 .form-group textarea{
   width :100%;
   height :200px;
-  
 }
