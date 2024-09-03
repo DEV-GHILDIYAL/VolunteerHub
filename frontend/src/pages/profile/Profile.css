@@ -146,3 +146,30 @@ ul {
 .logout-button:hover {
   background-color: #c82333;
 }
+
+.badge-list p {
+  padding :20px;
+}
+
+.badge-list hr{
+  color: #c0bcba;
+
+}
+.donation-list p{
+  padding :20px;
+}
+.settings-list p{
+  padding :20px;
+}
+
+.support-list p{
+  padding :20px;
+}
+
+.event-list h4{
+  padding :20px;
+
+}
+.event-list li{
+  padding :10px;
+}
