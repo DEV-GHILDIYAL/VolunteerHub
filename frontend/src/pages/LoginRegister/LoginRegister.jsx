@@ -29,9 +29,9 @@ const LoginRegister = () => {
     console.log("Password:", password);
   };
 
-  const handleGoogleSignIn = async (e) => {
+  const handleGoogleSignIn =  (e) => {
     e.preventDefault();
-    window.location.href = "http://localhost:5050/auth/google";
+      const response = window.location.href = 'http://localhost:5050/auth/google';
   };
 
   return (

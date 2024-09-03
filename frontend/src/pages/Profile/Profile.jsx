@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import './Profile.css';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import logoutHandle from '../../helpers/logoutHandle'
 
 const Profile = () => {
   const [activeSection, setActiveSection] = useState('account');
 
   const user = {
-    name: 'John Doe',
+    name: User,
     email: 'john.doe@example.com',
     phone: '123-456-7890',
     address: '123 Main St, Anytown, USA',
@@ -27,6 +28,7 @@ const Profile = () => {
   const handleSectionChange = (section) => {
     setActiveSection(section);
   };
+
 
   const renderContent = () => {
     switch (activeSection) {
@@ -170,7 +172,7 @@ const Profile = () => {
             My Events
           </li>
         </ul>
-        <button className="logout-button">Logout</button>
+        <button className="logout-button" onClick={logoutHandle()}>Logout</button>
       </div>
       <div className="profile-details">
         {renderContent()}

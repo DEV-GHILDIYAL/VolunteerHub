@@ -10,15 +10,17 @@ module.exports = function(passport){
     },
     async(accessToken,refeshToken,profile,done)=>{
         const newUser = {
-            Id: profile.id,
+            googleId: profile.id,
             displayName: profile.displayName,
             firstName: profile.name.givenName,
             lastName: profile.name.familyName,
             loginType: 'google',
-            image: profile.photos[0].value
+            image: profile.photos[0].value,
+            email:profile.emails[0].value,
         }
         
         try{
+            console.log('access token',accessToken)
             let user = await User.findOne({Id: profile.id})
             if(user){
                 done(null,user)

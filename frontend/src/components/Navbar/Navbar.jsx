@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import logoutHandle from '../../helpers/logoutHandle';
 
 // backend
 const Navbar = ({user}) => {
@@ -88,7 +89,7 @@ const Navbar = ({user}) => {
             <span className="dropdown-toggle">Account</span>
             <div className="dropdown-content">
               <Link to="/profile">Profile</Link>
-              <a href="http://localhost:5050/logout" >Logout</a>
+              <button onClick={logoutHandle()}>Logout</button>
             </div>
           </div>
           <Link to="/login" className="login-button">Login</Link>

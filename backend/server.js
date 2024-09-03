@@ -34,7 +34,8 @@ app.use(
     saveUninitialized:false,
     store: MongoStore.create({
         mongoUrl: process.env.MONGO_URL,
-        collectionName:'sessions'
+        collectionName:'sessions',
+        ttl: 1 * 24 * 60 * 60 // Session TTL in seconds (1 days in this example
     })
 }))
 
