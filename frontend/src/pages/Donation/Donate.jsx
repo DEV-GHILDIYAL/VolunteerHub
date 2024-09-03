@@ -72,7 +72,7 @@ const Donate = () => {
         </div>
 
         <div className="top-content">
-          <h2>Raised So Far <input type="number" value={total} readOnly /></h2>
+          <h2>Raised So Far <input type="text" value={total} readOnly /></h2>
         </div>
       </div>
       <Footer />
