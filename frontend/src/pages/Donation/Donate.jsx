@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import './Donate.css';
@@ -7,6 +7,16 @@ import { toast,Slide } from 'react-toastify';
 const Donate = () => {
   const [amount, setAmount] = useState(0)
   const [total, setTotal] = useState(0)
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem('total'));
+    if (items) {
+     setTotal(items);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('total', JSON.stringify(total));
+  }, [total]);
   const handleChange = (e)=>{
     setAmount(e.target.value);
     

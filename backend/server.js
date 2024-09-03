@@ -27,6 +27,7 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.json())//for json data
 
 //session
+//due to this express session we get access to the current user logged in
 app.use(
     session({
     secret:'shiwans',

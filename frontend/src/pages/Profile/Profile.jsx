@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Profile.css';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import logoutHandle from '../../helpers/logoutHandle'
+// import { UserContext } from '../../helpers/userContext';
 
 const Profile = () => {
   const [activeSection, setActiveSection] = useState('account');
+  // const { user } = useContext(UserContext)
 
   const user = {
-    name: "Deo",
+    name: 'd',
     email: 'john.doe@example.com',
     phone: '123-456-7890',
     address: '123 Main St, Anytown, USA',

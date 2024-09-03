@@ -1,10 +1,29 @@
-import React from 'react';
+import React,{useState,useEffect,useContext} from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logoutHandle from '../../helpers/logoutHandle';
+// import { UserContext } from '../../helpers/userContext';
 
 // backend
-const Navbar = ({user}) => {
+const Navbar = () => {
+  const [user, setUser] = useState({})
+
+  // const {user} = useContext(UserContext);
+
+
+  useEffect(() => {
+    const getUser = async () => {
+      try {
+        const response = await fetch('http://localhost:5050/login/success', { credentials: 'include' });
+        const data = await response.json();
+        setUser(data.user);
+        console.log('data from navbar',user)
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getUser();
+  }, [setUser]);
   return (
     <nav className="navbar">
       {/* Logo Section */}
@@ -60,34 +79,23 @@ const Navbar = ({user}) => {
             <Link to="/resources">Resources</Link>
           </div>
         </li>
-
-        <li><Link to="/admin">Admin</Link></li>
+        {/* { */}
+          {/* // Object.keys(user).length > 0?( */}
+            {/* <> */}
+              {/* <li><Link to="/admin">Admin</Link></li> */}
+              {/* <li><Link to="/profile" className='profile-navbar'>name</Link></li> */}
+            {/* </> */}
+          {/* ): */}
+          {/* <li><Link to="/login" className="login-navbar-button">Login</Link></li> */}
+        {/* } */}
       </ul>
-
-      
-
-      {/* Checking if user is logged in if yes then display name else show login button */}
-      {/* Waiting for backend */}
-      {/* <div className="navbar-account">
-        {user ? (
-          <div className="dropdown">
-            <span className="dropdown-toggle">Account ({user.displayName})</span>
-            <div className="dropdown-content">
-              <Link to="/profile">Profile</Link>
-              <a href="http://localhost:5050/logout">Logout</a>
-            </div>
-          </div>
-        ) : (
-          <Link to="/login" className="login-button">Login</Link>
-        )}
-      </div> */}
-
 
       {/* FOR TESTING */}
       <div className="navbar-account">
           <Link to="/profile" className='profile-navbar'>Profile</Link>
           <Link to="/login" className="login-navbar-button">Login</Link>
       </div>
+      <Link to="/logout">Logout</Link>
     </nav>
   );
 };

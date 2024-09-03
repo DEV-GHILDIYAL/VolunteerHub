@@ -20,7 +20,6 @@ module.exports = function(passport){
         }
         
         try{
-            console.log('access token',accessToken)
             let user = await User.findOne({Id: profile.id})
             if(user){
                 done(null,user)
