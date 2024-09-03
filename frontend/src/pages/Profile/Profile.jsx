@@ -65,7 +65,9 @@ const Profile = () => {
             <h3>Badges & Achievements</h3>
             <div className="badge-list">
               <p>Badge 1: Completed 5 Events</p>
+              <hr/>
               <p>Badge 2: Top Volunteer</p>
+              <hr/>
             </div>
           </div>
         );
@@ -75,7 +77,9 @@ const Profile = () => {
             <h3>Donation History</h3>
             <div className="donation-list">
               <p>Donation 1: $50 to Tree Planting</p>
+              <hr/>
               <p>Donation 2: $100 to Beach Cleanup</p>
+              <hr/>
             </div>
           </div>
         );
@@ -85,8 +89,11 @@ const Profile = () => {
             <h3>Settings</h3>
             <div className="settings-list">
               <p>Notification Preferences</p>
+              <hr/>
               <p>Privacy Settings</p>
+              <hr/>
               <p>Account Security</p>
+              <hr/>
             </div>
           </div>
         );
@@ -96,7 +103,9 @@ const Profile = () => {
             <h3>Support</h3>
             <div className="support-list">
               <p>Help Center: FAQs, Guides</p>
+              <hr/>
               <p>Contact Support: Form or Email</p>
+              <hr/>
             </div>
           </div>
         );
@@ -111,12 +120,14 @@ const Profile = () => {
                   <li key={event.id}>{event.title} - {event.date}</li>
                 ))}
               </ul>
+              <hr/>
               <h4>Past Events</h4>
               <ul>
                 {events.past.map(event => (
                   <li key={event.id}>{event.title} - {event.date}</li>
                 ))}
               </ul>
+              <hr/>
             </div>
           </div>
         );
