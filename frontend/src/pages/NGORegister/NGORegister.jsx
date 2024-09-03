@@ -33,11 +33,12 @@ const NGORegister = () => {
   return (
     <>
     <Navbar/>
+    <div className = "pageContainer">
     <div className="ngo-register-container">
-      <h2>Register Your NGO</h2>
+      <h2>Register NGO</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="ngoName">NGO Name:</label>
+          <label htmlFor="ngoName">NGO Name</label>
           <input
             type="text"
             id="ngoName"
@@ -47,7 +48,7 @@ const NGORegister = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="contactName">Contact Person Name:</label>
+          <label htmlFor="contactName">Contact Person Name</label>
           <input
             type="text"
             id="contactName"
@@ -57,7 +58,7 @@ const NGORegister = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="contactEmail">Contact Email:</label>
+          <label htmlFor="contactEmail">Contact Email</label>
           <input
             type="email"
             id="contactEmail"
@@ -67,7 +68,7 @@ const NGORegister = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="contactPhone">Contact Phone Number:</label>
+          <label htmlFor="contactPhone">Contact Phone Number</label>
           <input
             type="tel"
             id="contactPhone"
@@ -77,7 +78,7 @@ const NGORegister = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="address">Address:</label>
+          <label htmlFor="address">Address</label>
           <input
             type="text"
             id="address"
@@ -87,7 +88,7 @@ const NGORegister = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="website">Website:</label>
+          <label htmlFor="website">Website</label>
           <input
             type="url"
             id="website"
@@ -96,7 +97,7 @@ const NGORegister = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="mission">Mission Statement:</label>
+          <label htmlFor="mission">Mission Statement</label>
           <textarea
             id="mission"
             value={mission}
@@ -105,7 +106,7 @@ const NGORegister = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="regNumber">Registration Number:</label>
+          <label htmlFor="regNumber">Registration Number</label>
           <input
             type="text"
             id="regNumber"
@@ -115,7 +116,7 @@ const NGORegister = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="ngoType">Type of NGO:</label>
+          <label htmlFor="ngoType">Type of NGO</label>
           <select
             id="ngoType"
             value={ngoType}
@@ -129,7 +130,7 @@ const NGORegister = () => {
           </select>
         </div>
         <div className="form-group">
-          <label htmlFor="documents">Upload Documents:</label>
+          <label htmlFor="documents">Upload Documents</label>
           <input
             type="file"
             id="documents"
@@ -138,6 +139,7 @@ const NGORegister = () => {
         </div>
         <button type="submit">Register NGO</button>
       </form>
+    </div>
     </div>
     <Footer/>
     </>
