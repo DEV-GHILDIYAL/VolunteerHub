@@ -5,25 +5,6 @@ import './Navbar.css';
 
 // backend
 const Navbar = () => {
-  const [user, setUser] = useState({})
-
-  // const {user} = useContext(UserContext);
-
-
-  useEffect(() => {
-    const getUser = async () => {
-      try {
-        const response = await fetch('http://localhost:5050/login/success', { credentials: 'include' });
-        const data = await response.json();
-        setUser(data.user);
-        console.log('data from navbar',user)
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    getUser();
-  }, [setUser]);
   return (
     <nav className="navbar">
       {/* Logo Section */}
@@ -82,7 +63,7 @@ const Navbar = () => {
         {/* { */}
           {/* // Object.keys(user).length > 0?( */}
             {/* <> */}
-              {/* <li><Link to="/admin">Admin</Link></li> */}
+              {/* <li></li> */}
               {/* <li><Link to="/profile" className='profile-navbar'>name</Link></li> */}
             {/* </> */}
           {/* ): */}
@@ -92,6 +73,7 @@ const Navbar = () => {
 
       {/* FOR TESTING */}
       <div className="navbar-account">
+      <Link to="/admin">Admin</Link>
           <Link to="/profile" className='profile-navbar'>Profile</Link>
           <Link to="/login" className="login-navbar-button">Login</Link>
       </div>
