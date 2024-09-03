@@ -6,15 +6,36 @@ import logoutHandle from '../../helpers/logoutHandle'
 // import { UserContext } from '../../helpers/userContext';
 
 const Profile = () => {
+  const [users, setUsers] = useState({})
   const [activeSection, setActiveSection] = useState('account');
+
+  // const {user} = useContext(UserContext);
+
+
+  useEffect(() => {
+    const getUser = async () => {
+      try {
+        const response = await fetch('http://localhost:5050/login/success', { credentials: 'include' });
+        const data = await response.json();
+        setUsers(data.user);
+        console.log('data from navbar',user)
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getUser();
+  }, [setUsers]);
   // const { user } = useContext(UserContext)
 
   const user = {
-    name: 'd',
-    email: 'john.doe@example.com',
-    phone: '123-456-7890',
-    address: '123 Main St, Anytown, USA',
-    profilePicture: 'https://w7.pngwing.com/pngs/973/860/png-transparent-anonym-avatar-default-head-person-unknown-user-user-pictures-icon-thumbnail.png',
+    displayName: users.displayName,
+    firstName:users.firstName,
+    lastName:users.lastName,
+    loginType:users.loginType,
+    // email: 'john.doe@example.com',
+    // phone: '123-456-7890',
+    // address: '123 Main St, Anytown, USA',
   };
 
   const events = {
@@ -40,22 +61,22 @@ const Profile = () => {
             <h3>Account Information</h3>
             <div className="content-item">
               <label>Full Name</label>
-              <p>{user.name}</p>
+              <p>{user.displayName}</p>
             </div>
             <hr/>
             <div className="content-item">
-              <label>Email</label>
-              <p>{user.email}</p>
+              <label>Firstname</label>
+              <p>{user.firstName}</p>
             </div>
             <hr/>
             <div className="content-item">
-              <label>Phone</label>
-              <p>{user.phone}</p>
+              <label>lastName</label>
+              <p>{user.lastName}</p>
             </div>
             <hr/>
             <div className="content-item">
               <label>Address</label>
-              <p>{user.address}</p>
+              {/* <p>{user.address}</p> */}
             </div>
             <hr/>
             <button>Edit</button>
@@ -144,7 +165,7 @@ const Profile = () => {
     <div className="profile-container">
       <div className="profile-sidebar">
         <div className="profile-header">
-          <img className="profile-picture" src={user.profilePicture} alt="Profile" />
+          <img className="profile-picture" src={users.image} alt="Profile" />
           <h2>{user.name}</h2>
         </div>
         <ul>
