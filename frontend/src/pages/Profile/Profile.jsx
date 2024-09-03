@@ -18,7 +18,7 @@ const Profile = () => {
         const response = await fetch('http://localhost:5050/login/success', { credentials: 'include' });
         const data = await response.json();
         setUsers(data.user);
-        console.log('data from navbar',user)
+        console.log('data from profile',user)
       } catch (error) {
         console.log(error);
       }
@@ -165,7 +165,7 @@ const Profile = () => {
     <div className="profile-container">
       <div className="profile-sidebar">
         <div className="profile-header">
-          <img className="profile-picture" src={users.image} alt="Profile" />
+          <img className="profile-picture" src={users?.image} alt="Profile" />
           <h2>{user.name}</h2>
         </div>
         <ul>
