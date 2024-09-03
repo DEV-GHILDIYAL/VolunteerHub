@@ -8,7 +8,7 @@ const Profile = () => {
   const [activeSection, setActiveSection] = useState('account');
 
   const user = {
-    name: User,
+    name: "Deo",
     email: 'john.doe@example.com',
     phone: '123-456-7890',
     address: '123 Main St, Anytown, USA',

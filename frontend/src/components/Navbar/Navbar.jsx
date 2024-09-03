@@ -89,7 +89,7 @@ const Navbar = ({user}) => {
             <span className="dropdown-toggle">Account</span>
             <div className="dropdown-content">
               <Link to="/profile">Profile</Link>
-              <button onClick={logoutHandle()}>Logout</button>
+              <button onClick={logoutHandle()}><Link>Logout</Link></button>
             </div>
           </div>
           <Link to="/login" className="login-button">Login</Link>

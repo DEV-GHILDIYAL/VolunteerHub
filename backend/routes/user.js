@@ -11,7 +11,7 @@ router.get('/auth/google',passport.authenticate('google',{scope:['profile','emai
 
 router.get('/auth/google/callback',passport.authenticate('google',{failureRedirect:'/login?auth=failed'}),(req,res)=>{
     // res.redirect('/profile?auth=success')
-    res.redirect('/login')
+    res.redirect('http://localhost:5173/profile')
 })
 
 router.get('/logout',(req,res,next)=>{
