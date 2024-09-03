@@ -1,0 +1,29 @@
+.aboutContainer{
+    width :100%;
+    height :100%;
+    padding: 20px;
+    align-items: center;
+}
+
+.aboutContainer h1{ 
+    padding-bottom :30px;
+}
+
+.aboutSection h2{
+    padding: 30px;
+    color :black;
+    font-weight: 400;
+}
+.aboutSection p{
+    padding-left :30px;
+    padding-right: 30px;
+    color :rgb(115, 112, 112)
+}
+.lower{
+    padding-top:50px;
+    display: flex;
+    justify-content: center;
+}
+.lower p {
+    font-weight: bold;
+}
