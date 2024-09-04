@@ -1,40 +1,125 @@
+/* AdminPage.css */
+
 .admin-container {
-    display: flex;
-    height: 100vh;
-  }
-  
-  .sidebar {
-    width: 200px;
-    background-color: #f4f4f4;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .sidebar button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    text-align: left;
-    transition: background-color 0.3s ease;
-  }
-  
-  .sidebar button:hover {
-    background-color: #0056b3;
-  }
-  
-  .content {
-    flex-grow: 1;
-    padding: 20px;
-  }
-  
-  .dashboard, .manage-users, .settings {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+}
+
+.sidebar button:hover {
+  background-color: #ccc;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.dashboard, .manage-users, .settings {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.manage-users {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search-input {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  outline: none;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.search-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.search-container button{
+  padding-left:20px;
+  margin-bottom: 20px;
+}
+
+.manage-users h2{
+  color :black;
+}
+
+
+
+.filter-container {
+  display: flex;
+  align-items: left;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.filter-select {
+  margin-left: 5px;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.manage-users h2{
+  padding-top: 10px;
+}
+
+
+.filter{
+  display: flex;
+  gap :10px;
+}
+
+.search-container{
+  width:1000px;
+}
+.filter-container{
+  width :30%;
+}

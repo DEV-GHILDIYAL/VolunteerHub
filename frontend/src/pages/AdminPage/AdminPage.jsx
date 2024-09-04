@@ -48,9 +48,27 @@ const Dashboard = () => {
 const ManageUsers = () => {
   return (
     <div className="manage-users">
+      <div className="filter">
+        <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-input"/>
+        <button class="search-button">
+            <img src="https://img.icons8.com/material-outlined/24/000000/search.png" alt="Search"/>
+        </button>
+        </div>
+        <div class="filter-container">
+        <label for="filter-select">Filter By:</label>
+        <select id="filter-select" class="filter-select">
+            <option value="name">Name</option>
+            <option value="location">Location</option>
+            <option value="date">Date</option>
+        </select>
+    </div>
+      </div>
       <h2>Manage Users</h2>
       <p>Here you can manage all registered users.</p>
       {/* Add user management content here */}
+    
+
     </div>
   );
 };
