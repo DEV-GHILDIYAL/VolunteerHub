@@ -1,14 +1,14 @@
 import React from "react";
 import Home from "./pages/HomePage/Home";
 import { Routes, Route } from "react-router-dom";
-import LoginRegister from "./pages/LoginRegister/LoginRegister";
-import NGORegister from "./pages/NGORegister/NGORegister";
-import Donate from "./pages/Donation/Donate";
-import Profile from "./pages/Profile/Profile";
-import UpComingEvent from "./pages/UpcomingEvents/UpComingEvents";
-import AdminPage from "./pages/Admin/AdminPage";
+import LoginRegister from "./pages/LoginRegisterPage/LoginRegister";
+import NGORegister from "./pages/NGORegisterPage/NGORegister";
+import Donate from "./pages/DonationPage/Donate";
+import UpComingEvent from "./pages/UpcomingEventsPage/UpComingEvents";
+import AdminPage from "./pages/AdminPage/AdminPage";
 import EventPage from "./pages/eventPage/EventPage";
 import About from "./pages/AboutPage/About";
+import Profile from "./pages/ProfilePage/Profile";
 import NGODashboard from "./pages/NGOPage/NGODashboard";
 // import { UserProvider } from "./helpers/userContext";
 
