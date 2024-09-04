@@ -51,7 +51,7 @@ app.use(express.static(path.join(__dirname,'public')))
 //routes connection
 app.use('/',require('./routes/user'))
 // app.use('/admin',require('./routes/admin'))
-// app.use('/ngo',require('./routes/ngo'))
+app.use('/ngo',require('./routes/ngo'))
 app.use('/api', require('./routes/api'));
 
 

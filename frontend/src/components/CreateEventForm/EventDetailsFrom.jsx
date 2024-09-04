@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './EventDetailsForm.css';
+import axios from 'axios'
 
 const EventDetailsForm = () => {
   const [eventName, setEventName] = useState('');
@@ -20,6 +21,7 @@ const EventDetailsForm = () => {
   const [registrationDetails, setRegistrationDetails] = useState('');
   const [costs, setCosts] = useState('');
   const [notes, setNotes] = useState('');
+  const [event,setEvent] = useState([])
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -40,7 +42,7 @@ const EventDetailsForm = () => {
     setImagePreview(null);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // Add your submit logic here
     console.log({
@@ -48,6 +50,40 @@ const EventDetailsForm = () => {
       organizer, ngoName, importance, status, image, requirements, 
       expectedAttendance, registrationDetails, costs, notes
     });
+    const eventDetails =[
+      eventName,description,location,date,category,organizer,ngoName,
+    ]
+    setEvent(eventDetails)
+
+    const response = await fetch('http://localhost:5050/ngo/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ eventName,description, location, date,category,organizer, ngoName }),
+      credentials: 'include',
+    });
+    
+    // const data = await response.json();
+    // console.log('data from eventdetailsfrom', data);
+    setEventName('')
+    setDescription('')
+    setLocation('')
+    setDate('')
+    setTime('')
+    setDuration('')
+    setCategory('')
+    setOrganizer('')
+    setNgoName('')
+    setImportance('')
+    setStatus('')
+    setImage('')
+    setImagePreview('')
+    setRequirements('')
+    setExpectedAttendance('')
+    setRegistrationDetails('')
+    setCosts('')
+    setNotes('')
   };
 
   return (
@@ -88,7 +124,7 @@ const EventDetailsForm = () => {
             type="date" 
             value={date} 
             onChange={(e) => setDate(e.target.value)} 
-            required 
+            // required 
           />
         </div>
         <div className="form-group">
@@ -97,7 +133,7 @@ const EventDetailsForm = () => {
             type="time" 
             value={time} 
             onChange={(e) => setTime(e.target.value)} 
-            required 
+            // required 
           />
         </div>
         <div className="form-group">
@@ -106,7 +142,7 @@ const EventDetailsForm = () => {
             type="text" 
             value={duration} 
             onChange={(e) => setDuration(e.target.value)} 
-            required 
+            // required 
           />
         </div>
       </div>
@@ -143,7 +179,7 @@ const EventDetailsForm = () => {
           <select 
             value={importance} 
             onChange={(e) => setImportance(e.target.value)} 
-            required 
+            // required 
           >
             <option value="">Select Importance Level</option>
             <option value="High">High</option>
@@ -159,7 +195,7 @@ const EventDetailsForm = () => {
             type="text" 
             value={status} 
             onChange={(e) => setStatus(e.target.value)} 
-            required 
+            // required 
           />
         </div>
         <div className="form-group">
@@ -168,7 +204,7 @@ const EventDetailsForm = () => {
             type="file" 
             accept="image/*" 
             onChange={handleImageChange} 
-            required 
+            // required 
           />
           {imagePreview && (
             <div className="image-preview">
@@ -185,7 +221,7 @@ const EventDetailsForm = () => {
             type="number" 
             value={expectedAttendance} 
             onChange={(e) => setExpectedAttendance(e.target.value)} 
-            required 
+            // required 
           />
         </div>
         <div className="form-group">
@@ -194,7 +230,7 @@ const EventDetailsForm = () => {
             type="text" 
             value={costs} 
             onChange={(e) => setCosts(e.target.value)} 
-            required 
+            // required 
           />
         </div>
       </div>
@@ -204,7 +240,7 @@ const EventDetailsForm = () => {
           <textarea 
             value={registrationDetails} 
             onChange={(e) => setRegistrationDetails(e.target.value)} 
-            required 
+            // required 
           />
         </div>
         <div className="form-group">
