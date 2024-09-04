@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./pages/Home/Home";
+import Home from "./pages/HomePage/Home";
 import { Routes, Route } from "react-router-dom";
 import LoginRegister from "./pages/LoginRegister/LoginRegister";
 import NGORegister from "./pages/NGORegister/NGORegister";
@@ -7,9 +7,9 @@ import Donate from "./pages/Donation/Donate";
 import Profile from "./pages/Profile/Profile";
 import UpComingEvent from "./pages/UpcomingEvents/UpComingEvents";
 import AdminPage from "./pages/Admin/AdminPage";
-import Error from './components/Error';
 import EventPage from "./pages/eventPage/EventPage";
-import About from "./pages/About/About";
+import About from "./pages/AboutPage/About";
+import NGODashboard from "./pages/NGOPage/NGODashboard";
 // import { UserProvider } from "./helpers/userContext";
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/event" element={<EventPage />} />
           <Route path="/about" element={<About />} />
-          <Route path='*' element={<Error />} />
+
         </Routes>
       {/* </UserProvider> */}
     </div>

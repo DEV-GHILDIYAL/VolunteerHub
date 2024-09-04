@@ -1,0 +1,29 @@
+.ngo-statistics {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .ngo-statistics h3 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .stat-card {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  .stat-card h4 {
+    margin-bottom: 10px;
+  }
+  

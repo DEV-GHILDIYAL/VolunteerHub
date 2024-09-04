@@ -1,0 +1,14 @@
+.ngo-dashboard {
+    display: flex;
+    height: auto;
+}
+
+.ngo-dashboard-content {
+    display: flex;
+    flex: 1;
+}
+
+.main-content {
+    flex: 1; /* Adjusted to fill remaining space */
+    padding: 20px;
+}
