@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './NGODashboard.css';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import CreateEventForm from '../../components/CreateEventForm/EventDetailsFrom';
