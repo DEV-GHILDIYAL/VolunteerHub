@@ -9,6 +9,7 @@ import UpComingEvent from "./pages/UpcomingEvents/UpComingEvents";
 import AdminPage from "./pages/Admin/AdminPage";
 import Error from './components/Error';
 import EventPage from "./pages/eventPage/EventPage";
+import About from "./pages/About/About";
 // import { UserProvider } from "./helpers/userContext";
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/events/upcoming" element={<UpComingEvent />} />
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/event" element={<EventPage />} />
+          <Route path="/about" element={<About />} />
           <Route path='*' element={<Error />} />
         </Routes>
       {/* </UserProvider> */}

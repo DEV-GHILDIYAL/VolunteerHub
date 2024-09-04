@@ -23,6 +23,10 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  isNgo:{
+    type: Boolean,
+    default: true,
+  }
 });
 
 // Secure the password with bcrypt
@@ -64,6 +68,6 @@ userSchema.methods.generateToken = async function () {
   }
 };
 
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model("Userr", userSchema);
 
 module.exports = User;

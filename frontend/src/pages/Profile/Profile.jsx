@@ -33,6 +33,7 @@ const Profile = () => {
     firstName:users.firstName,
     lastName:users.lastName,
     loginType:users.loginType,
+    image:users.image,
     // email: 'john.doe@example.com',
     // phone: '123-456-7890',
     // address: '123 Main St, Anytown, USA',
@@ -165,7 +166,7 @@ const Profile = () => {
     <div className="profile-container">
       <div className="profile-sidebar">
         <div className="profile-header">
-          <img className="profile-picture" src={users?.image} alt="Profile" />
+          <img className="profile-picture" src={user.image} alt="Profile" />
           <h2>{user.name}</h2>
         </div>
         <ul>

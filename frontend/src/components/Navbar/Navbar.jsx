@@ -1,6 +1,7 @@
 import React,{useState,useEffect,useContext} from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import logoutHandle from '../../helpers/logoutHandle';
 // import { UserContext } from '../../helpers/userContext';
 
 // backend
@@ -69,15 +70,17 @@ const Navbar = () => {
           {/* ): */}
           {/* <li><Link to="/login" className="login-navbar-button">Login</Link></li> */}
         {/* } */}
+        <Link to="/admin">Admin</Link>
+        <Link to="/ngo">NGO</Link>
       </ul>
 
       {/* FOR TESTING */}
       <div className="navbar-account">
-      <Link to="/admin">Admin</Link>
+      
           <Link to="/profile" className='profile-navbar'>Profile</Link>
           <Link to="/login" className="login-navbar-button">Login</Link>
       </div>
-      <Link to="/logout">Logout</Link>
+      <button onClick={logoutHandle()}>Logout</button>
     </nav>
   );
 };
