@@ -5,14 +5,10 @@ import LoginRegister from "./pages/LoginRegisterPage/LoginRegister";
 import NGORegister from './pages/NGORegisterPage/NGORegister'
 import Donate from "./pages/DonationPage/Donate";
 import Profile from "./pages/profilePage/Profile";
-import NGORegister from "./pages/NGORegisterPage/NGORegister";
-import Donate from "./pages/DonationPage/Donate";
-
 import UpComingEvent from "./pages/UpcomingEventsPage/UpComingEvents";
 import AdminPage from "./pages/AdminPage/AdminPage";
 import EventPage from "./pages/eventPage/EventPage";
 import About from "./pages/AboutPage/About";
-import Profile from "./pages/ProfilePage/Profile";
 import NGODashboard from "./pages/NGOPage/NGODashboard";
 // import { UserProvider } from "./helpers/userContext";
 

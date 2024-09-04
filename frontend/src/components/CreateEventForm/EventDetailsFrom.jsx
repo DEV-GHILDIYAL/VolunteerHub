@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './EventDetailsForm.css';
-import axios from 'axios'
+
 
 const EventDetailsForm = () => {
   const [eventName, setEventName] = useState('');
@@ -51,7 +51,7 @@ const EventDetailsForm = () => {
       expectedAttendance, registrationDetails, costs, notes
     });
     const eventDetails =[
-      eventName,description,location,date,category,organizer,ngoName,
+      eventName,description,location,date,category,organizer,ngoName,time,importance,status,image,requirements,expectedAttendance,registrationDetails,costs,notes
     ]
     setEvent(eventDetails)
 
@@ -60,9 +60,10 @@ const EventDetailsForm = () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ eventName,description, location, date,category,organizer, ngoName }),
+      body: JSON.stringify({ eventName,description, location, date,category,organizer, ngoName,time,importance,status,image,requirements,expectedAttendance,registrationDetails,costs,notes }),
       credentials: 'include',
     });
+    // console.log('response from eventdetails form',response)
     
     // const data = await response.json();
     // console.log('data from eventdetailsfrom', data);

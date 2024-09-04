@@ -1,32 +1,37 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import './EventList.css';
 
-const EventList = async() => {
-  // const [event,setEvent] = useState({})
-    const response = await fetch('http://localhost:5050/ngo/events', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      credentials: 'include',
-    });
-    console.log("getting data from enentlist",response)
-      // setEvent(response.json())
-  const events = [
-    {
-      id: 1,
-      name: 'Beach Cleanup',
-      date: '2024-09-10',
-      time: '08:00 AM',
-      location: 'Miami Beach, FL',
-      importance: 'High',
-    },
-    // Additional events
-  ];
+const EventList = () => {
+  const [event,setEvent] = useState([])
+
+  useEffect(() => {
+   const fetchEvents = async () => {
+     try {
+       const response = await fetch('http://localhost:5050/ngo/events', {
+         method: 'GET',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         credentials: 'include',
+       });
+
+       if (response.ok) {
+         const data = await response.json();
+         setEvent(data.events);
+         // console.log('dashboard data',data)
+       } else {
+         console.error('Failed to fetch events');
+       }
+     } catch (error) {
+       console.error('Error fetching events:', error);
+     }
+   };
+
+   fetchEvents();
+ }, []);
 
   return (
     <div className="event-list">
-      <h3>Manage Events</h3>
       <table>
         <thead>
           <tr>
@@ -34,18 +39,18 @@ const EventList = async() => {
             <th>Date</th>
             <th>Time</th>
             <th>Location</th>
-            <th>Importance</th>
+            <th>category</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          {events.map((event) => (
-            <tr key={event.id}>
-              <td>{event.name}</td>
+        {event.map((event) => (
+            <tr key={event._id}>
+              <td>{event.eventName}</td>
               <td>{event.date}</td>
               <td>{event.time}</td>
               <td>{event.location}</td>
-              <td>{event.importance}</td>
+              <td>{event.category}</td>
               <td>
                 <button>Edit</button>
                 <button>Delete</button>
