@@ -30,30 +30,29 @@ const NgoSchema = new mongoose.Schema({
     },time:{
         type: String,
         required:true
-    },importance:{
-        type: String,
-        required:true
-    },status:{
-        type:String ,
-        required:true
     },
-    // image:{
-    //     type: ,
+    
+    // },status:{
+    //     type:String ,
     //     required:true
     // },
-    expectedAttendance:{
-        type: Number,
-        required:true
-    },costs:{
-        type:String,
-        required:true
-    },registrationDetails:{
-        type:String,
-        required:true
-    },notes:{
-        type:String,
-        required:true
-    },
+    // // image:{
+    // //     type: ,
+    // //     required:true
+    // // },
+    // expectedAttendance:{
+    //     type: Number,
+    //     required:true
+    // },costs:{
+    //     type:String,
+    //     required:true
+    // },registrationDetails:{
+    //     type:String,
+    //     required:true
+    // },notes:{
+    //     type:String,
+    //     required:true
+    // },
     createdAt: {
         type:Date,
         default:Date.now
