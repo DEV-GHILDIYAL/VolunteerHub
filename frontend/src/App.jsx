@@ -26,6 +26,7 @@ const App = () => {
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/event" element={<EventPage />} />
           <Route path="/about" element={<About />} />
+          <Route path="/ngo/dashboard" element={<NGODashboard />} />
 
         </Routes>
       {/* </UserProvider> */}
