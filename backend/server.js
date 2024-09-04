@@ -51,7 +51,7 @@ app.use(express.static(path.join(__dirname,'public')))
 app.use('/',require('./routes/user'))
 // app.use('/admin',require('./routes/admin'))
 // app.use('/ngo',require('./routes/ngo'))
-app.use('/api', require('./routes/api'));
+// app.use('/api', require('./routes/api'));
 
 
 const PORT = process.env.PORT || 5500
