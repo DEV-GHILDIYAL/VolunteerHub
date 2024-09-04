@@ -1,7 +1,17 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './EventList.css';
 
-const EventList = () => {
+const EventList = async() => {
+  // const [event,setEvent] = useState({})
+    const response = await fetch('http://localhost:5050/ngo/events', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+    });
+    console.log("getting data from enentlist",response)
+      // setEvent(response.json())
   const events = [
     {
       id: 1,
