@@ -71,7 +71,7 @@ const Navbar = () => {
           {/* <li><Link to="/login" className="login-navbar-button">Login</Link></li> */}
         {/* } */}
         <Link to="/admin">Admin</Link>
-        <Link to="/ngo">NGO</Link>
+        <Link to="/ngo/dashboard">NGO</Link>
       </ul>
 
       {/* FOR TESTING */}
