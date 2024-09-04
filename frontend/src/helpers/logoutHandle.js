@@ -8,7 +8,7 @@ const logoutHandle=()=>{
     const handlelogout = async()=>{
         try {
             const response = await fetch('http://localhost:5050/logout', {
-                method: 'GET',
+                method: 'POST',
             });
 
             if(response.ok){

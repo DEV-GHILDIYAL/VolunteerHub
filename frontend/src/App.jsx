@@ -1,12 +1,12 @@
 import React from "react";
 import Home from "./pages/HomePage/Home";
 import { Routes, Route } from "react-router-dom";
-import LoginRegister from "./pages/LoginRegisterPage/LoginRegister";
-import NGORegister from "./pages/NGORegisterPage/NGORegister";
-import Donate from "./pages/DonationPage/Donate";
-import Profile from "./pages/profilePage/Profile";
-import UpComingEvent from "./pages/UpcomingEventsPage/UpComingEvents";
-import AdminPage from "./pages/AdminPage/AdminPage";
+import LoginRegister from "./pages/LoginRegister/LoginRegister";
+import NGORegister from "./pages/NGORegister/NGORegister";
+import Donate from "./pages/Donation/Donate";
+import Profile from "./pages/Profile/Profile";
+import UpComingEvent from "./pages/UpcomingEvents/UpComingEvents";
+import AdminPage from "./pages/Admin/AdminPage";
 import EventPage from "./pages/eventPage/EventPage";
 import About from "./pages/AboutPage/About";
 import NGODashboard from "./pages/NGOPage/NGODashboard";
@@ -26,7 +26,6 @@ const App = () => {
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/event" element={<EventPage />} />
           <Route path="/about" element={<About />} />
-          <Route path="/ngo" element={<NGODashboard/>}/>
 
         </Routes>
       {/* </UserProvider> */}
