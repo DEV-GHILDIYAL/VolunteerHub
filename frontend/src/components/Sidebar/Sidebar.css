@@ -13,6 +13,7 @@
   margin-bottom: 20px;
   font-size: 1.5em;
   text-align: center;
+  color : white;
 }
 
 .sidebar ul {
@@ -21,13 +22,15 @@
 }
 
 .sidebar ul li {
-  padding: 15px;
+  color: black;
+  padding: 10px;
   margin-bottom: 10px;
-  background-color: #34495e;
+  background-color:  #ddd;
   cursor: pointer;
-  text-align: center;
+  text-align: left;
+  border-radius: 4px;
 }
 
 .sidebar ul li:hover {
-  background-color: #1abc9c;
+  background-color: #ccc;
 }
